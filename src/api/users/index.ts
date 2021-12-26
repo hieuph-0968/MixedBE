@@ -1,9 +1,9 @@
 import { Router, Request, Response } from "express";
 
-const routerAuth = Router();
+const routeAuth = Router();
 
-routerAuth.get("/", (req: Request,res: Response) => {
+routeAuth.get("/", (req: Request,res: Response) => {
     res.send("get all users")
 })
 
-export {routerAuth}
+export {routeAuth}
