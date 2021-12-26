@@ -1,10 +1,14 @@
 import express from "express";
-import { routerAuth } from "./users";
-import { routerPost } from "./posts";
+import { routeAuth } from "./users";
+import { routeProduct } from "./products";
+import { routeCart } from "./cart";
+import { routeOrder } from "./orders";
 
 const apiRoute = express();
 
-apiRoute.use('/users', routerAuth)
-apiRoute.use('/posts', routerPost)
+apiRoute.use('/users', routeAuth)
+apiRoute.use('/posts', routeProduct)
+apiRoute.use('/cart', routeCart)
+apiRoute.use('/orders', routeOrder)
 
 export {apiRoute}
